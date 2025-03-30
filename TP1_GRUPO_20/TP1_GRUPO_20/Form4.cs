@@ -26,7 +26,7 @@ namespace TP1_GRUPO_20
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string textoSeleccionado = "Usted seleccono los siguientes elementos:\n";  
+            string textoSeleccionado = "Usted seleccono los siguientes elementos:\n";
             if (radBtnFem.Checked)
             {
                 textoSeleccionado += "Sexo: Femenino\n";
@@ -48,19 +48,21 @@ namespace TP1_GRUPO_20
             if (checkLstBox.CheckedItems.Count > 0)   // Verifica si hay algo seleccionado, si se selecciono, mostramos lo siguiente: 
             {
                 textoSeleccionado += "Oficio: \n";
-            }
-            else
-            {
-                MessageBox.Show("Debe seleccionar por lo menos un oficio.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-                foreach (string s in checkLstBox.CheckedItems)
+                
+                foreach (string s in checkLstBox.CheckedItems) // Recorremos con un ciclo foreach el contenido del CheckListBox
                 {
                     textoSeleccionado += "- " + s.ToString() + "\n";
                 }
+                
+                lblCont.Text = textoSeleccionado; //Asignamos el total del contenido al Label
+                lblCont.Show(); //Mostramos el Label
+            }
+            else //Si no tiene nada seleccionado, avisa y borra el contenido anterior si es que existía
+            {
+                MessageBox.Show("Debe seleccionar por lo menos un oficio.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                lblCont.Text = "";
+            }
 
-            lblCont.Text = textoSeleccionado;
-            lblCont.Show();
         }
     }
-
 }
