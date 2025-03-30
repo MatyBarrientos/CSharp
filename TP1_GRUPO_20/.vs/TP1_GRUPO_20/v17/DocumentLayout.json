@@ -43,14 +43,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Form2.cs [Design]",
+              "Title": "Form2.cs [Dise\u00F1o]",
               "DocumentMoniker": "D:\\Estudios\\UTN\\Prog 3\\Workspace\\TP1_GRUPO_20\\TP1_GRUPO_20\\Form2.cs",
               "RelativeDocumentMoniker": "TP1_GRUPO_20\\Form2.cs",
-              "ToolTip": "D:\\Estudios\\UTN\\Prog 3\\Workspace\\TP1_GRUPO_20\\TP1_GRUPO_20\\Form2.cs [Design]",
-              "RelativeToolTip": "TP1_GRUPO_20\\Form2.cs [Design]",
+              "ToolTip": "D:\\Estudios\\UTN\\Prog 3\\Workspace\\TP1_GRUPO_20\\TP1_GRUPO_20\\Form2.cs [Dise\u00F1o]",
+              "RelativeToolTip": "TP1_GRUPO_20\\Form2.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-28T12:16:37.306Z",
-              "EditorCaption": " [Design]"
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
