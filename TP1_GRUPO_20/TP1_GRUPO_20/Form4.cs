@@ -26,6 +26,7 @@ namespace TP1_GRUPO_20
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //Declaramos una variable string para almacenar el texto seleccionado decidimos que todo salga en un solo label
             string textoSeleccionado = "Usted seleccono los siguientes elementos:\n";
             if (radBtnFem.Checked)
             {

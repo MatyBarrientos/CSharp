@@ -33,11 +33,15 @@ namespace TP1_GRUPO_20
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             if (txtBoxNombre.Text.Trim() != "")
+
             {
+                //obtiene el nombre ingresado y lo convierte a mayúsculas sin espacios en blanco
                 string nuevoNombre = txtBoxNombre.Text.Trim().ToUpper();
 
+                //busco coincicencias en la lista de nombres
                 bool existe = lstBoxIzquierda.FindStringExact(nuevoNombre) != -1;
 
+                //si no existe, lo agrego a la lista caso contratio muestro un mensaje
                 if (!existe)
                 {
                     lstBoxIzquierda.Items.Add(txtBoxNombre.Text.Trim());
@@ -56,6 +60,7 @@ namespace TP1_GRUPO_20
 
         private void btnSimple_Click(object sender, EventArgs e)
         {
+            //al elemento seleccionado de la lista izquierda lo agrego a la lista derecha y si no hay seleccion muestro un mensaje
             if (lstBoxIzquierda.SelectedIndex != -1) 
             {
                 string seleccionado = lstBoxIzquierda.SelectedItem.ToString();
@@ -70,6 +75,7 @@ namespace TP1_GRUPO_20
 
         private void btnDoble_Click(object sender, EventArgs e)
         {
+            //muevo todos los elementos de la lista izquierda a la lista derecha y si no hay elementos muestro un mensaje
             if (lstBoxIzquierda.Items.Count > 0)
             {
                 foreach (string nombres in lstBoxIzquierda.Items)

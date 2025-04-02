@@ -22,6 +22,7 @@ namespace TP1_GRUPO_20
 
         }
 
+        //los siguientes métodos son para las transciciones entre formularios (principal a -> ejercicio 1 | 2 | 3 )
         private void btnEj1_Click(object sender, EventArgs e)
         {
             Ejercicio1 ejercicio1 = new Ejercicio1(this);

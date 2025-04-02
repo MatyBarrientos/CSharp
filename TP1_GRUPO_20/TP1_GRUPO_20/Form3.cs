@@ -36,11 +36,11 @@ namespace TP1_GRUPO_20
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            //variables auxiliartes
+            //variables auxiliartes sin espacios en blanco
 
             string apellido = txtBoxApellido.Text.Trim();
             string nombre = txtBoxNombre.Text.Trim();
-            string elemento = nombre + " " + apellido;
+            string elemento = nombre + " " + apellido; //es más comodo trabajar con un solo string
 
 
             if (txtBoxNombre.Text.Trim() == ""){ //comprueba de que el nombre no esté vacio
@@ -56,6 +56,7 @@ namespace TP1_GRUPO_20
             bool existe = false;
             foreach (string s in lbElementos.Items)
             {
+                //comparo sin importar mayusculas o minusculas
                 if (s.ToUpper() == elemento.ToUpper())
                 {
                     existe = true;
@@ -70,11 +71,12 @@ namespace TP1_GRUPO_20
                 return ;
             }
             lbElementos.Items.Add(elemento);
+            //limpio los casilleros
             txtBoxNombre.Text = "";
             txtBoxApellido.Text = "";
 
 
-            //es al pedo, no leí el material y hay funciones que ya lo hacen jajajaj
+            //método realizado antes de leer por completo el material de estudio luego descubrimos que la propiedad sorted lo hace más eficiente
 
             //si llegué acá es porque no está ->  entonces arranco a buscar la posicion
             //int pos = 0;
@@ -94,13 +96,14 @@ namespace TP1_GRUPO_20
 
         private void btnBorrar_Click(object sender, EventArgs e)
         {
+            //establecemos un indice para saber que elemento se seleccionó
             int pos = lbElementos.SelectedIndex;
-
+            //si no se seleccionó ningun elemento (pos==-1), se muestra un mensaje de error 
             if (pos == -1)
             {
                 MessageBox.Show("No se seleccionó elemento", "atencion",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
-            else
+            else //si se seleccionó un elemento, se elimina de la lista mediante la posicion
             {
                 lbElementos.Items.RemoveAt(pos);
             }
